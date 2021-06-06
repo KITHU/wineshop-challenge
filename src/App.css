@@ -1,0 +1,173 @@
+.navbar {
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 120px;
+}
+
+.details_a {
+  width: 25%;
+  border: 1px solid red;
+}
+.details_b {
+  background: rgb(245, 247, 243);
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+.size_one {
+  width: 25%;
+  border-right: 2px solid white;
+}
+.size_two {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.center_text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bold_a {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.bold_b {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.item_button_border {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 25px 0 25px;
+  border-bottom: 2px solid white;
+}
+.item_button {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 25px 0 25px;
+}
+/* product css */
+
+input {
+  width: 50px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  width: 280px;
+  height: 220px;
+  display: flex;
+  margin: 50px 0 50px 0;
+}
+.bottle {
+  flex: 1;
+  height: 100%;
+  width: 70px;
+}
+.button_l {
+  height: 100%;
+  width: 49%;
+}
+
+.button_r {
+  height: 100%;
+  width: 49%;
+  color: white;
+  background-color: rgb(29, 12, 12);
+}
+.data {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.title {
+  flex: 2;
+  width: 100%;
+}
+.price {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.buttons {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.right_prices {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-left: 2px dotted black;
+}
+
+.left_prices {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.p_hd1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.p_hd2 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.hello {
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+hr {
+  flex-grow: 1;
+  /* width: 100%; */ /* or this */
+}
