@@ -4,28 +4,28 @@ const Products = (props) => {
     let img = "https://storage.googleapis.com/wineshop-assets/wine-bottles/reisling.png"
   return (
     <div>
-      <div class="card">
+      <div className="card">
         <img
-          class="bottle"
+          className="bottle"
         //   src="https://storage.googleapis.com/wineshop-assets/wine-bottles/reisling.png"
         src={props.image}
           alt="reisling"
         />
-        <div class="data">
-          <div class="title">
-            <p class="p_hd1">{props.no}</p>
-            <p class="p_hd2">{props.name}</p>
+        <div className="data">
+          <div className="title">
+            <p className="p_hd1">{props.no}</p>
+            <p className="p_hd2">{props.name}</p>
           </div>
 
-          <div class="price">
-            <div class="left_prices">
+          <div className="price">
+            <div className="left_prices">
               <p>Bottle</p>
               <p>${props.bottle}</p>
               <span>
                 <input type="number" width="20px" /> QTY
               </span>
             </div>
-            <div class="right_prices">
+            <div className="right_prices">
               <p>Case</p>
               <p>${props.case}</p>
               <span>
@@ -35,7 +35,10 @@ const Products = (props) => {
           </div>
 
           <div class="buttons">
-            <button class="button_l">details</button>
+            <button class="button_l"
+            onClick={()=>props.getdetails(props.details)}>
+              details
+              </button>
 
             <button class="button_r">add to cart</button>
           </div>
