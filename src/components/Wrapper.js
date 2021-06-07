@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchProducts } from "../redux/actions";
+import { fetchProducts, add_to_cart } from "../redux/actions";
 import Products from "./Products";
 
 class Wrapperr extends Component {
@@ -11,6 +11,9 @@ class Wrapperr extends Component {
   showDetails = (detail) => {
     alert(detail);
   };
+  additems = (id,bcase,bottle)=>{
+    this.props.add_to_cart(id, bcase,bottle)
+  }
   render() {
     let url = "https://storage.googleapis.com/wineshop-assets/wine-bottles/";
     const product = this.props.products.map((obj) => (
@@ -23,6 +26,7 @@ class Wrapperr extends Component {
         image={url + obj.image}
         details = {obj.details}
         getdetails={this.showDetails}
+        additemstocart={this.additems}
       />
     ));
     return <div className="flex_container">{product}</div>;
@@ -30,6 +34,6 @@ class Wrapperr extends Component {
 }
 const mapStateToProps = (state) => {
   console.log(state.products);
-  return { products: state.products };
+  return { products: state.products};
 };
-export default connect(mapStateToProps, { fetchProducts })(Wrapperr);
+export default connect(mapStateToProps, { fetchProducts, add_to_cart })(Wrapperr);

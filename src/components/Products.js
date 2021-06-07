@@ -1,6 +1,22 @@
-import React from "react";
+import React,{useState} from "react";
+import { add_to_cart, remove_from_cart } from "../redux/actions";
 
 const Products = (props) => {
+  let [bqty, setbqty] = useState(0)
+  let [cqty, setcqty] = useState(0)
+
+  const handleCaseChange=(e)=>{
+    setcqty(e.target.value)
+  }
+  const handleBottleChange=(e)=>{
+    setbqty(e.target.value)
+  }
+
+  const addtocart = (id , bcase , bottle)=>{
+    props.additemstocart(id ,bcase ,bottle)
+  }
+
+  
     let img = "https://storage.googleapis.com/wineshop-assets/wine-bottles/reisling.png"
   return (
     <div>
@@ -22,25 +38,33 @@ const Products = (props) => {
               <p>Bottle</p>
               <p>${props.bottle}</p>
               <span>
-                <input type="number" width="20px" /> QTY
+                <input
+                 type="number"
+                 name="bqty"
+                 onChange={handleBottleChange}
+                 width="20px" /> QTY
               </span>
             </div>
             <div className="right_prices">
               <p>Case</p>
               <p>${props.case}</p>
               <span>
-                <input type="number" name=""/> QTY
+                <input 
+                type="number"
+                name="cqty"
+                onChange={handleCaseChange}/> QTY
               </span>
             </div>
           </div>
 
-          <div class="buttons">
-            <button class="button_l"
+          <div className="buttons">
+            <button className="button_l"
             onClick={()=>props.getdetails(props.details)}>
               details
               </button>
 
-            <button class="button_r">add to cart</button>
+            <button className="button_r" 
+            onClick={()=>addtocart(props.no,cqty,bqty )}>add to cart</button>
           </div>
         </div>
       </div>
